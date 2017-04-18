@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录注册切换</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="dome.css" >
+</head>
+<body>
+<div class="body">
+    <div class="veen">
+        <div class="login-btn splits">
+            <p>Already an user?</p>
+            <button>Login</button>
+        </div>
+        <div class="rgstr-btn splits">
+            <p>Don't have an account?</p>
+            <button>Register</button>
+        </div>
+        <div class="wrapper">
+            <div id="login">
+                <h3>Login</h3>
+                <div class="mail">
+                    <input type="mail" name="">
+                    <label>Mail or Username</label>
+                </div>
+                <div class="passwd">
+                    <input type="password" name="">
+                    <label>Password</label>
+                </div>
+                <div class="submit">
+                    <button class="dark">Login</button>
+                </div>
+            </div>
+            <div id="register">
+                <h3>Register</h3>
+                <div class="name">
+                    <input type="text" name="">
+                    <label>Full Name</label>
+                </div>
+                <div class="mail">
+                    <input type="mail" name="">
+                    <label>Mail</label>
+                </div>
+                <div class="uid">
+                    <input type="text" name="">
+                    <label>User Name</label>
+                </div>
+                <div class="passwd">
+                    <input type="password" name="">
+                    <label>Password</label>
+                </div>
+                <div class="submit">
+                    <button class="dark">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script  src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".veen .rgstr-btn button").click(function(){
+            $('.veen .wrapper').addClass('move');
+            $('.body').css('background','#e0b722');
+        });
+        $(".veen .login-btn button").click(function(){
+            $('.veen .wrapper').removeClass('move');
+            $('.body').css('background','#ff4931');
+        });
+    });
+</script>
+
+</body>
+</html>
